@@ -74,16 +74,4 @@ Understanding the Linux boot process is crucial for DevOps engineers as it helps
 5. **`init` (`systemd`, `SysVinit`, or `Upstart`)** sets up the system environment and starts necessary services.
 6. The system reaches a designated **runlevel/target**, completing the boot process and providing a user environment.
 
-### Visual Overview of the Linux Boot Process
 
-```mermaid
-graph TD
-    A[Power On] --> B[BIOS/UEFI]
-    B --> C[MBR/GPT]
-    C --> D[GRUB Bootloader]
-    D --> E[Load Kernel and initramfs/initrd]
-    E --> F[Kernel Initialization]
-    F --> G[init Process (systemd/SysVinit/Upstart)]
-    G --> H[Runlevel/Target Reached]
-    H --> I[User Space Initialization]
-    I --> J[System Ready]
