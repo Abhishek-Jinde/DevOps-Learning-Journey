@@ -5,7 +5,7 @@
 3. [Auto Scaling](#auto-scaling)
 4. [High Availability](#high-availability)
 5. [AMI Overview (Amazon Machine Image)](#ami-overview-amazon-machine-image)
-6. [Assignments](#assignments)
+
 
 ---
 
