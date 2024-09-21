@@ -1,4 +1,4 @@
-# Load Balancers – Comprehensive Notes with Hands-on Project
+# Load Balancers
 
 ## 1. Introduction to Load Balancers
 A load balancer is a network device or software that distributes incoming traffic across multiple servers to ensure high availability, fault tolerance, and scalability. By evenly distributing the traffic load, a load balancer prevents any single server from becoming overwhelmed, ensuring system reliability and improving performance.
