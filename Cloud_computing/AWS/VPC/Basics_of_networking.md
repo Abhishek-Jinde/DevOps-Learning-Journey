@@ -20,7 +20,7 @@ Networking is a critical concept for any DevOps engineer, as it forms the backbo
 10. [Load Balancing](#load-balancing)
 11. [Firewalls](#firewalls)
 12. [Virtual Private Networks (VPN)](#virtual-private-networks-vpn)
-13. [Common Networking Tools](#common-networking-tools)
+
 
 ---
 
@@ -201,28 +201,8 @@ A DevOps engineer can use a VPN to securely connect to internal cloud resources 
 
 ---
 
-## Common Networking Tools
 
-### 1. **Ping**
 
-`Ping` tests the connectivity between two devices on a network.
-
-```bash
-ping google.com
-
-### 2. Traceroute
-
-`Traceroute` shows the path that data takes to reach a destination, identifying each hop along the way.
-
-```bash
-traceroute google.com
-
-### Nslookup
-
-`Nslookup` queries DNS records to find the IP address associated with a domain.
-
-```bash
-nslookup google.com
 
 
 
