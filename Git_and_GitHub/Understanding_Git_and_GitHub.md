@@ -264,6 +264,7 @@ git merge release/v1.0
 git checkout develop
 git merge release/v1.0
 
+```
 ## 7.3.2. GitHub Flow
 
 GitHub Flow is a simpler and more lightweight branching strategy used in continuous deployment environments. Unlike GIT Flow, GitHub Flow does not use the `develop` branch. Instead, all development work is done using feature branches, which are merged directly into `main`.
@@ -299,6 +300,8 @@ git commit -m "Updated navigation bar"
 git push origin feature/update-navbar
 
 # Open a pull request for review
+
+```
 
 ## 7.3.3. Trunk-Based Development
 
@@ -336,6 +339,8 @@ git merge bugfix/fix-login
 
 # Push the changes to main
 git push origin main
+
+```
 
 ## 7.4. Choosing the Right Branching Strategy
 
