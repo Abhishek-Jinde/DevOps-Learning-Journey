@@ -54,10 +54,6 @@ There are multiple ways to install Tomcat on different operating systems. Below 
 
 ### 4.1 Installing Tomcat on Linux (Ubuntu)
 
-bash
-
-Copy code
-
 `# Step 1: Update your system
 sudo apt update
 
@@ -98,19 +94,12 @@ The `server.xml` file controls the core configuration of Tomcat. It defines how 
 
 -   **Connector Configuration**: The following XML snippet defines an HTTP connector on port 8080.
 
-xml
-
-Copy code
-
 `<Connector port="8080" protocol="HTTP/1.1"
            connectionTimeout="20000"
            redirectPort="8443" />`
 
 -   **Example Use Case**: If you need to change the default port, for example, to 9090, you would update the `port` attribute in the `server.xml` file:
 
-xml
-
-Copy code
 
 `<Connector port="9090" protocol="HTTP/1.1" />`
 
@@ -119,10 +108,6 @@ Copy code
 The `web.xml` file is the deployment descriptor for Java web applications. It maps servlets to specific URLs.
 
 -   **Detailed Example**: The following example maps a servlet called `MyServlet` to the `/myapp` URL.
-
-xml
-
-Copy code
 
 `<servlet>
     <servlet-name>MyServlet</servlet-name>
@@ -139,10 +124,6 @@ This file defines users and roles for accessing the Tomcat management interfaces
 
 -   **Example Configuration**: To allow a user to access the manager interface, you would add the following entry:
 
-xml
-
-Copy code
-
 `<user username="admin" password="adminpassword" roles="manager-gui,admin-gui" />`
 
 6\. Deploying Web Applications on Tomcat
@@ -151,10 +132,6 @@ Copy code
 Deploying a Java web application in Tomcat involves copying a `.war` file to the `webapps/` directory.
 
 ### Example: Manual Deployment of a Web Application
-
-bash
-
-Copy code
 
 `# Step 1: Copy your WAR file to the webapps directory
 sudo cp myapp.war /opt/tomcat/webapps/
@@ -169,10 +146,6 @@ Tomcat provides a management interface that allows administrators to manage appl
 
 -   **URL**: `http://localhost:8080/manager`
 -   **Authentication**: Make sure you have added a user with the appropriate roles in `tomcat-users.xml`. For example:
-
-xml
-
-Copy code
 
 `<user username="admin" password="admin" roles="manager-gui,admin-gui" />`
 
@@ -193,10 +166,6 @@ SSL is necessary to encrypt data between clients and servers. You can configure 
 
 -   **Example**: Add the following entry to enable HTTPS on port 8443.
 
-xml
-
-Copy code
-
 `<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
            maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
            clientAuth="false" sslProtocol="TLS" />`
@@ -209,20 +178,12 @@ Restrict access to the manager and admin applications by assigning specific role
 
 -   **Example**: Only allow access to the manager app from localhost.
 
-xml
-
-Copy code
-
 `<Valve className="org.apache.catalina.valves.RemoteAddrValve"
        allow="127.0.0.1" />`
 
 ### 8.3 Avoid Running Tomcat as Root
 
 It's a security risk to run Tomcat as the root user. Instead, create a dedicated Tomcat user with limited privileges.
-
-bash
-
-Copy code
 
 `sudo useradd -r -m -U -d /opt/tomcat -s /bin/bash tomcat`
 
